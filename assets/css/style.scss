@@ -45,14 +45,14 @@ body {
     }
   }
 }
-
+// キービジュアルエリア
 .mainKv {
   position: relative;
   background-image: url(../images/kv.jpg);
   background-position: center right;
   background-repeat: no-repeat;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   min-height: 660px;
   &__title {
     position: absolute;
@@ -66,7 +66,29 @@ body {
     text-shadow: 10px 10px 5px #000;
   }
 }
-
+// サブタイトル
+.mainContent__subTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  &::before,
+  &::after {
+    display: inline-block;
+    content: "";
+    vertical-align: 5px;
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+  }
+  &::before {
+    margin-right: 8px;
+  }
+  &::after {
+    margin-left: 8px;
+  }
+}
+// コンセプトエリア
 .mainContent__cat {
   margin-bottom: 120px;
   .mainContent__inner {
@@ -106,30 +128,61 @@ body {
       width: calc(50% - 40px);
       height: 630px;
       overflow-y: auto;
-      .mainContent__subTitle {
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 24px;
-        &::before,
-        &::after {
-          display: inline-block;
-          content: "";
-          vertical-align: 5px;
-          width: 32px;
-          height: 2px;
-          background-color: #000;
-        }
-        &::before {
-          margin-right: 8px;
-        }
-        &::after {
-          margin-left: 8px;
-        }
-      }
       .concept__sentence p {
         margin-bottom: 16px;
       }
+    }
+  }
+}
+// アプリケーションエリア
+.application {
+  .mainContent__cat {
+    margin-bottom: 240px;
+  }
+  &__cat {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__img {
+    width: 60%;
+    &__bg {
+      background-image: url(../images/main_02.jpg);
+      width: 100%;
+      height: 580px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow-x: hidden;
+      position: relative;
+      display: inline-block;
+    }
+  }
+  &__area {
+    width: 40%;
+    &__inner {
+      padding-left: 60px;
+      position: relative;
+      &::before {
+        width: calc(100% + 200px);
+        content: "";
+        position: absolute;
+        background-color: #f4f4f4;
+        height: calc(100% + 200px);
+        right: 0;
+        bottom: -100px;
+        z-index: -1;
+      }
+    }
+  }
+  .mainContent__subTitle {
+    text-align: left;
+  }
+  &__sentence p {
+    line-height: 2;
+    &::first-letter {
+      font-weight: bold;
+      font-size: 1.2rem;
     }
   }
 }

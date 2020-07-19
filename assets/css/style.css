@@ -55,7 +55,7 @@ body {
   background-position: center right;
   background-repeat: no-repeat;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   min-height: 660px;
 }
 
@@ -69,6 +69,30 @@ body {
   font-weight: bold;
   color: #fff;
   text-shadow: 10px 10px 5px #000;
+}
+
+.mainContent__subTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.mainContent__subTitle::before, .mainContent__subTitle::after {
+  display: inline-block;
+  content: "";
+  vertical-align: 5px;
+  width: 32px;
+  height: 2px;
+  background-color: #000;
+}
+
+.mainContent__subTitle::before {
+  margin-right: 8px;
+}
+
+.mainContent__subTitle::after {
+  margin-left: 8px;
 }
 
 .mainContent__cat {
@@ -121,30 +145,65 @@ body {
   overflow-y: auto;
 }
 
-.mainContent__cat .concept__cat .concept__text .mainContent__subTitle {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 24px;
-}
-
-.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::before, .mainContent__cat .concept__cat .concept__text .mainContent__subTitle::after {
-  display: inline-block;
-  content: "";
-  vertical-align: 5px;
-  width: 32px;
-  height: 2px;
-  background-color: #000;
-}
-
-.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::before {
-  margin-right: 8px;
-}
-
-.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::after {
-  margin-left: 8px;
-}
-
 .mainContent__cat .concept__cat .concept__text .concept__sentence p {
   margin-bottom: 16px;
+}
+
+.application .mainContent__cat {
+  margin-bottom: 240px;
+}
+
+.application__cat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.application__img {
+  width: 60%;
+}
+
+.application__img__bg {
+  background-image: url(../images/main_02.jpg);
+  width: 100%;
+  height: 580px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.application__area {
+  width: 40%;
+}
+
+.application__area__inner {
+  padding-left: 60px;
+  position: relative;
+}
+
+.application__area__inner::before {
+  width: calc(100% + 200px);
+  content: "";
+  position: absolute;
+  background-color: #f4f4f4;
+  height: calc(100% + 200px);
+  right: 0;
+  bottom: -100px;
+  z-index: -1;
+}
+
+.application .mainContent__subTitle {
+  text-align: left;
+}
+
+.application__sentence p {
+  line-height: 2;
+}
+
+.application__sentence p::first-letter {
+  font-weight: bold;
+  font-size: 1.2rem;
 }

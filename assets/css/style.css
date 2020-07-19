@@ -70,3 +70,81 @@ body {
   color: #fff;
   text-shadow: 10px 10px 5px #000;
 }
+
+.mainContent__cat {
+  margin-bottom: 120px;
+}
+
+.mainContent__cat .mainContent__inner {
+  max-width: 1080px;
+  margin: auto;
+  padding: 120px 0 0;
+}
+
+.mainContent__cat .mainContent__title {
+  font-family: fantasy;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mainContent__cat .mainContent__title::after {
+  content: "";
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  border-bottom: 2px solid;
+}
+
+.mainContent__cat .concept__cat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mainContent__cat .concept__cat .concept__img {
+  width: calc(50% - 40px);
+}
+
+.mainContent__cat .concept__cat .concept__img img {
+  width: 100%;
+}
+
+.mainContent__cat .concept__cat .concept__text {
+  width: calc(50% - 40px);
+  height: 630px;
+  overflow-y: auto;
+}
+
+.mainContent__cat .concept__cat .concept__text .mainContent__subTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::before, .mainContent__cat .concept__cat .concept__text .mainContent__subTitle::after {
+  display: inline-block;
+  content: "";
+  vertical-align: 5px;
+  width: 32px;
+  height: 2px;
+  background-color: #000;
+}
+
+.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::before {
+  margin-right: 8px;
+}
+
+.mainContent__cat .concept__cat .concept__text .mainContent__subTitle::after {
+  margin-left: 8px;
+}
+
+.mainContent__cat .concept__cat .concept__text .concept__sentence p {
+  margin-bottom: 16px;
+}

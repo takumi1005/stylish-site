@@ -66,3 +66,70 @@ body {
     text-shadow: 10px 10px 5px #000;
   }
 }
+
+.mainContent__cat {
+  margin-bottom: 120px;
+  .mainContent__inner {
+    max-width: 1080px;
+    margin: auto;
+    padding: 120px 0 0;
+  }
+  .mainContent__title {
+    font-family: fantasy;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    &::after {
+      content: "";
+      transform: translateX(-50%);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      border-bottom: 2px solid;
+    }
+  }
+  .concept__cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .concept__img {
+      width: calc(50% - 40px);
+      img {
+        width: 100%;
+      }
+    }
+    .concept__text {
+      width: calc(50% - 40px);
+      height: 630px;
+      overflow-y: auto;
+      .mainContent__subTitle {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+        &::before,
+        &::after {
+          display: inline-block;
+          content: "";
+          vertical-align: 5px;
+          width: 32px;
+          height: 2px;
+          background-color: #000;
+        }
+        &::before {
+          margin-right: 8px;
+        }
+        &::after {
+          margin-left: 8px;
+        }
+      }
+      .concept__sentence p {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

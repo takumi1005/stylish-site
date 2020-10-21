@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: europa, "Yu Gothic", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-family: europa, 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
 }
 
 .header {
@@ -80,7 +80,7 @@ body {
 
 .mainContent__subTitle::before, .mainContent__subTitle::after {
   display: inline-block;
-  content: "";
+  content: '';
   vertical-align: 5px;
   width: 32px;
   height: 2px;
@@ -115,7 +115,7 @@ body {
 }
 
 .mainContent__cat .mainContent__title::after {
-  content: "";
+  content: '';
   transform: translateX(-50%);
   position: absolute;
   bottom: 0;
@@ -186,7 +186,7 @@ body {
 
 .application__area__inner::before {
   width: calc(100% + 200px);
-  content: "";
+  content: '';
   position: absolute;
   background-color: #f4f4f4;
   height: calc(100% + 200px);
@@ -234,4 +234,51 @@ body {
   line-height: 2;
   font-weight: bold;
   word-break: break-all;
+}
+
+.card .mainContent__inner {
+  max-width: 1280px;
+  padding: 0;
+}
+
+.card__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card__list {
+  width: calc((100% / 3) - 16px);
+  padding-right: 16px;
+  margin-bottom: 60px;
+}
+
+.card__list :nth-child(3n) {
+  padding-right: 0;
+}
+
+.card__list :nth-child(n + 4) {
+  margin-bottom: 0;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.card__img {
+  margin-bottom: 16px;
+  border: 2px solid;
+}
+
+.card__img img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  padding: 4px;
+  object-fit: cover;
+}
+
+.contact .mainContent__inner {
+  padding: 0;
 }
